@@ -74,14 +74,16 @@ export const ImagesInfo = ({ resValue }) => {
             }) => {
               return (
                 <li key={id}>
-                  {OneCard(
-                    largeImageURL,
-                    previewURL,
-                    user,
-                    likes,
-                    downloads,
-                    tags
-                  )}
+                  {
+                    <OneCard
+                      fullImg={largeImageURL}
+                      alt={previewURL}
+                      likes={likes}
+                      // likes,
+                      downloads={downloads}
+                      tags={tags}
+                    />
+                  }
                 </li>
               );
             }
